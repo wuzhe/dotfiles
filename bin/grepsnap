@@ -1,0 +1,12 @@
+#!/bin/sh
+gs_tempdir=$(mktemp -d -t grepsnap.XXXXXXXX)
+cd $gs_tempdir
+wget -q $2
+grep startidx * |\
+sed -e "s,<a href,\n<a href,g" |\
+grep startidx |\
+grep -v Next |\
+sort -u |\
+wget -B $2 -qi- --force-html
+grep -i $1 *
+rm -r $gs_tempdir

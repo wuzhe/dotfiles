@@ -1,0 +1,123 @@
+/* xterm.xrdb --- X resource file for XTerm         -*- xrdb -*-
+   Copyright (C) 2003, 2004  Daniel Brockman        vim:ft=xdefaults:
+
+   Author:   Daniel Brockman <drlion@deepwood.net>
+   URL:      http://www.deepwood.net/software/xrdb/xterm.xrdb
+   Updated:  2004-10-11
+
+   This file is released under the GNU General Public License.
+  
+   This file is free software; you can redistribute it and/or
+   modify it under the terms of the GNU General Public License as
+   published by the Free Software Foundation; either version 2, or (at
+   your option) any later version.
+  
+   This file is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+   General Public License for more details.
+  
+   To receive a copy of the GNU General Public License, go to
+   <http://www.gnu.org/licenses/#GPL> or write to the Free Software
+   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+
+   Description:
+
+     This file applies to XTerm a set of symbolic constants assumed to
+     be defined by the user (`FONT' and `FONT_BOLD') and by a color
+     theme (the `COLOR_' ones).
+
+   Usage:
+
+     1. Put this file somewhere in your home directory.  You might
+        want to create a separate directory, e.g., `~/.xrdb/', in
+        which to put all X resource files.
+
+     2. Uncomment the lines you like in the ``Suggested Settings''
+        section below.
+
+     3. Obtain an xrdb color theme compatible with this file.  The
+        only one I currently know about is `look-zenburn.xrdb' (see
+        below for a link).
+
+     4. Define `FONT' and `FONT_BOLD' in your main X resource file
+        (most likely `~/.Xdefaults' or `~/.Xresources').  Personally,
+        I have the following two lines at the top:
+
+          #define FONT       -*-lucy-medium-*-*-*-10-*-*-*-*-*-*-*
+          #define FONT_BOLD  -*-lucy-bold-*-*-*-10-*-*-*-*-*-*-*
+
+        You can find a link to the Lucy font files below.  The Lucy
+        fonts currently only come in size 10.  If this is too small
+        for your taste, I suggest Lucida Typewriter, from which Lucy
+        is (most likely illegally) derived.  Simply substitute
+        `lucidatypewriter' for `lucy' and `12' for `10'.
+
+     5. Put the line `#include "~/.xrdb/xterm.xrdb"' in your main X
+        resource file, *below* the other ones you just added.
+
+     6. Restart your X session or run `xrdb -load <resource-file>',
+        where <resource-file> is your main X resource file.
+
+     7. Restart your XTerms.
+
+   See also:
+
+     The Zenburn XRDB color theme
+       <http://www.deepwood.net/software/zenburn/look-zenburn.xrdb>
+
+     Other application-specific X resource files
+       <http://www.deepwood.net/software/xrdb/>
+
+     The Lucy font family (Lucida Typewriter derivative)
+       <http://www.deepwood.net/software/lucy/>  */
+
+/* Suggested Settings */
+
+UXTerm*saveLines:               4096
+UXTerm*cursorBlink:             true
+UXTerm*scrollBar:               false
+UXTerm*visualBell:              true
+
+
+/* Normally, you should not have to edit anything below.  */
+
+#ifdef FONT
+UXTerm*faceName:                    FONT
+#endif
+#ifdef DFONT
+UXTerm*faceNameDoublesize:         DFONT
+#endif
+#ifdef FONT_BOLD
+UXTerm*boldFont:                FONT_BOLD
+#endif
+
+#if defined(COLOR_FG) && defined(COLOR_BG)
+UXTerm*background:              COLOR_BG
+UXTerm*foreground:              COLOR_FG
+UXTerm*cursorColor:             COLOR_FG
+UXTerm*pointerColorBackground:  COLOR_BG
+UXTerm*pointerColor:            COLOR_FG
+#endif
+
+#ifdef COLOR_TERM_BLACK
+UXTerm*colorBD:                 COLOR_TERM_LIGHT_YELLOW
+UXTerm*colorUL:                 COLOR_TERM_LIGHT_RED
+
+UXTerm*color0:                  COLOR_TERM_BLACK
+UXTerm*color1:                  COLOR_TERM_DARK_RED
+UXTerm*color2:                  COLOR_TERM_DARK_GREEN
+UXTerm*color3:                  COLOR_TERM_DARK_YELLOW
+UXTerm*color4:                  COLOR_TERM_DARK_BLUE
+UXTerm*color5:                  COLOR_TERM_DARK_MAGENTA
+UXTerm*color6:                  COLOR_TERM_DARK_CYAN
+UXTerm*color7:                  COLOR_TERM_LIGHT_GRAY
+UXTerm*color8:                  COLOR_TERM_DARK_GRAY
+UXTerm*color9:                  COLOR_TERM_LIGHT_RED
+UXTerm*color10:                 COLOR_TERM_LIGHT_GREEN
+UXTerm*color11:                 COLOR_TERM_LIGHT_YELLOW
+UXTerm*color12:                 COLOR_TERM_LIGHT_BLUE
+UXTerm*color13:                 COLOR_TERM_LIGHT_MAGENTA
+UXTerm*color14:                 COLOR_TERM_LIGHT_CYAN
+UXTerm*color15:                 COLOR_TERM_WHITE
+#endif

@@ -1,7 +1,7 @@
 style "user-font"
 {
-    font_name = "sans-serif 8"
+    font_name = "sans 8"
 }
 widget_class "*" style "user-font"
 
-gtk-font-name = "sans-serif 8"
+gtk-font-name = "sans 8"

@@ -1,13 +1,15 @@
-(add-to-list 'load-path "~/.elisp/")
 (let ((default-directory "~/.elisp/"))
+  (normal-top-level-add-to-load-path '("."))
   (normal-top-level-add-subdirs-to-load-path))
 
-(when
-    (load
-     (expand-file-name "~/.emacs.d/elpa/package.el"))
+(setq package-archives
+      '(("ELPA" . "http://tromey.com/elpa/")
+        ("gnu" . "http://elpa.gnu.org/packages/")
+        ("technomancy" . "http://repo.technomancy.us/emacs/")
+        ("marmalade" . "http://marmalade-repo.org/packages/")))
+
+(when (load (expand-file-name "~/.emacs.d/elpa/package.el"))
   (package-initialize))
 
-(add-to-list 'package-archives
-             '("technomancy" . "http://repo.technomancy.us/emacs/") t) 
-
 (require 'init)
+

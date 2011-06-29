@@ -1,3 +1,0 @@
-#!/bin/sh
-
-exec /usr/bin/autossh -M 0 -o TCPKeepAlive=no -o ServerAliveInterval=20 -o ServerAliveCountMax=1 -D localhost:3127 wz@fuxi.madk.org -p 8600 -N -v

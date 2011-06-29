@@ -19,7 +19,7 @@ static const char *tags[] = { "emacs", "local", "remote", "web", "5", "6", "7", 
 static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            True,        -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 2,       True,        -1 },
+	{ "Firefox",  NULL,       NULL,       1 << 3,       True,        -1 },
 	{ "Mplayer",  NULL,       NULL,       1 << 7,       True,        -1 },
 };
 
@@ -47,7 +47,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  = { "urxvt", NULL };
+static const char *termcmd[]  = { "uxterm", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */

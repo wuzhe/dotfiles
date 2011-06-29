@@ -1,3 +1,3 @@
 #!/bin/bash
 
-/sbin/ifconfig $1 | grep "P-t-P" | gawk -F: '{print $3}' | gawk '{print $1}'
+/sbin/ifconfig $1 | grep "P-t-P" | awk -F: '{print $3}' | awk '{print $1}'

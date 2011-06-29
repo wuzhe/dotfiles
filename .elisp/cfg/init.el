@@ -21,10 +21,10 @@
 ;; byte compile config file if changed
 (add-hook 'after-save-hook
           '(lambda ()
-	     (when (string-match
-		    (concat (expand-file-name "~/.elisp/cfg/") ".*\.el$")
-		    buffer-file-name)
-	       (byte-compile-file buffer-file-name))))
+             (when (string-match
+                    (concat (expand-file-name "~/.elisp/cfg/") ".*\.el$")
+                    buffer-file-name)
+               (byte-compile-file buffer-file-name))))
 
 (defun set-window-width (n)
   "Set the selected window's width."
@@ -145,9 +145,9 @@
 (defun sm-lambda-mode-hook ()
   (font-lock-add-keywords
    nil `(("\\<lambda\\>"
-	  (0 (progn (compose-region (match-beginning 0) (match-end 0)
-				    ,(make-char 'greek-iso8859-7 107))
-		    nil))))))
+          (0 (progn (compose-region (match-beginning 0) (match-end 0)
+                                    ,(make-char 'greek-iso8859-7 107))
+                    nil))))))
 (add-hook 'emacs-lisp-mode-hook 'sm-lambda-mode-hook)
 (add-hook 'lisp-interactive-mode-hook 'sm-lamba-mode-hook)
 (add-hook 'scheme-mode-hook 'sm-lambda-mode-hook)
@@ -158,16 +158,16 @@
   "Renames both current buffer and file it's visiting to NEW-NAME."
   (interactive "sNew name: ")
   (let ((name (buffer-name))
-	(filename (buffer-file-name)))
+        (filename (buffer-file-name)))
     (if (not filename)
-	(message "Buffer '%s' is not visiting a file!" name)
+        (message "Buffer '%s' is not visiting a file!" name)
       (if (get-buffer new-name)
-	  (message "A buffer named '%s' already exists!" new-name)
-	(progn
-	  (rename-file name new-name 1)
-	  (rename-buffer new-name)
-	  (set-visited-file-name new-name)
-	  (set-buffer-modified-p nil))))))
+          (message "A buffer named '%s' already exists!" new-name)
+        (progn
+          (rename-file name new-name 1)
+          (rename-buffer new-name)
+          (set-visited-file-name new-name)
+          (set-buffer-modified-p nil))))))
 
 (defun setup-proxy()
   "Setup Emacs for using socks proxy"

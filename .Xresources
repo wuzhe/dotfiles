@@ -1,5 +1,5 @@
 #define FONT  Consolas:size=9
-#define DFONT WenQuanYi Bitmap Song:size=9
+#define DFONT WenQuanYi Micro Hei Mono:size=9
 
 #include "/home/wz/.xrdb/01-look-zenburn.xrdb"
 #include "/home/wz/.xrdb/02-xterm.xrdb"
@@ -48,7 +48,7 @@ urxvt*cutchars:        '"'()*<>[]{|}
 !
 ! Appearance
 urxvt*font: xft:Consolas:pixelsize=15, \
-            xft:WenQuanYi Bitmap Song:pixelsize=13
+            xft:WenQuanYi Micro Hei Mono:pixelsize=13
 urxvt*letterSpace: -1
 !
 ! Cursor

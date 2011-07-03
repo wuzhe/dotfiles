@@ -133,9 +133,9 @@
 (setq uniquify-after-kill-buffer-p t) ; rename after killing uniquified
 (setq uniquify-ignore-buffers-re "^\\*") ; don't muck with special buffers
 
-(require 'w3m-load)
-(setq w3m-use-cookies t)
-(setq w3m-key-binding 'info)
+;; (require 'w3m-load)
+;; (setq w3m-use-cookies t)
+;; (setq w3m-key-binding 'info)
 
 ;; keep backup files neatly out of the way in .~/
 (setq backup-directory-alist '(("." . ".~")))

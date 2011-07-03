@@ -1,88 +1,17 @@
-#define FONT  Consolas:size=9
-#define DFONT WenQuanYi Micro Hei Mono:size=9
+#define FONT  xft:Consolas:pixelsize=15
+#define DFONT xft:WenQuanYi Bitmap Song:pixelsize=14
 
 #include "/home/wz/.xrdb/01-look-zenburn.xrdb"
 #include "/home/wz/.xrdb/02-xterm.xrdb"
-
-UXTerm*termName: xterm-256color
-UXTerm*metaSendsEscape: true
-UXTerm*eightBitInput: false
+#include "/home/wz/.xrdb/03-urxvt.xrdb"
 
 ! X cursor
 Xcursor.theme: Vanilla-DMZ
 ! Xcursor.size: 16
 
 ! XFT and Font settings
-Xft*dpi:       120
+!Xft*dpi:       96
 Xft*antialias: true
 Xft*hinting:   true
 Xft*hintstyle: hintslight
 Xft*rgba:      rgb
-
-!{{{ URXVT
-!
-! General
-urxvt*termName:  rxvt-256color
-urxvt*loginShell:         true
-urxvt*scrollBar:         false
-urxvt*secondaryScroll:    true
-urxvt*saveLines:         65535
-urxvt*cursorBlink:       false
-!urxvt*cursorUnderline:   true
-urxvt*urgentOnBell:       true
-!urxvt*override-redirect:false
-!urxvt*borderLess:       false
-!urxvt*internalBorder:       0
-!urxvt*externalBorder:       0
-urxvt*iso14755:	         false
-urxvt*iso14755_52:       false
-
-!
-! Extensions
-!urxvt*perl-lib:        /usr/lib/urxvt/perl/
-!urxvt*perl-ext-common: default,matcher,searchable-scrollback
-urxvt*urlLauncher:     firefox
-urxvt*matcher.button:  1
-! Catch ugly URLs
-urxvt*cutchars:        '"'()*<>[]{|}
-!
-! Appearance
-urxvt*font: xft:Consolas:pixelsize=15, \
-            xft:WenQuanYi Micro Hei Mono:pixelsize=13
-urxvt*letterSpace: -1
-!
-! Cursor
-urxvt*cursorColor: #DCDCCC
-!
-! Pseudo Transparency
-!urxvt*shading:    50
-!urxvt*transparent:true
-!
-! Zenburn color-scheme
-urxvt*background:  #3f3f3f
-urxvt*foreground:  #dcdccc
-! black + red
-!urxvt*color0:     #3f3f3f
-urxvt*color0:      #1E2320
-urxvt*color1:      #705050
-! green + yellow
-urxvt*color2:      #60b48a
-urxvt*color3:      #dfaf8f
-! blue + purple
-urxvt*color4:      #506070
-urxvt*color5:      #dc8cc3
-! cyan + white
-urxvt*color6:      #8cd0d3
-urxvt*color7:      #dcdccc
-! bright-black + bright-red
-urxvt*color8:      #709080
-urxvt*color9:      #dca3a3
-! bright-green + bright-yellow
-urxvt*color10:     #c3bf9f
-urxvt*color11:     #f0dfaf
-! bright-blue + bright-purple
-urxvt*color12:     #94bff3
-urxvt*color13:     #ec93d3
-! bright-cyan + bright-white
-urxvt*color14:     #93e0e3
-urxvt*color15:     #ffffff

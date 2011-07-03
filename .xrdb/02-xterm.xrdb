@@ -74,12 +74,15 @@
 
 /* Suggested Settings */
 
+UXTerm*termName: xterm-256color
+UXTerm*metaSendsEscape: true
+UXTerm*eightBitInput: false
+
 UXTerm*saveLines:               4096
 UXTerm*cursorBlink:             true
 UXTerm*scrollBar:               false
 UXTerm*visualBell:              true
 
-
 /* Normally, you should not have to edit anything below.  */
 
 #ifdef FONT

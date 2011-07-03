@@ -2,7 +2,7 @@
 
 
 (defvar rv-font-cjk
-  "WenQuanYi Micro Hei Mono")
+  "WenQuanYi Bitmap Song")
 (defvar rv-font-latin
   "Consolas")
 (defvar rv-font-symbol
@@ -11,7 +11,7 @@
 (defvar rv-font-latin-size 9.0)
 (defvar rv-font-cjk-size 9.5)
 
-(setq cjk-font "WenQuanYi Micro Hei Mono")
+(setq cjk-font "WenQuanYi Bitmap Song")
 ;;(setq rv-font-cjk "AR PL New Kai")
 
 ;;(unless (equal (frame-parameter nil 'font) "tty")

@@ -14,9 +14,9 @@ SAVEHIST=1000
 #------------------------------
 # Variables
 #------------------------------
-export EDITOR="vim"
+export EDITOR="edit"
 export PAGER="most"
-export PATH="${PATH}:/usr/local/jdk1.6.0/bin:${HOME}/bin"
+export PATH="${HOME}/bin:${PATH}:/usr/local/jdk1.6.0/bin"
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 

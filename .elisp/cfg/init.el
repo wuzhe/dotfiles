@@ -16,7 +16,7 @@
 
 (fset 'yes-or-no-p 'y-or-n-p)
 
-;; (server-start)
+(server-start)
 
 ;; byte compile config file if changed
 (add-hook 'after-save-hook

@@ -3,13 +3,11 @@
   (normal-top-level-add-subdirs-to-load-path))
 
 (setq package-archives
-       '(
-         ("ELPA" . "http://tromey.com/elpa/")
-         ("gnu" . "http://elpa.gnu.org/packages/")
-         ("technomancy" . "http://repo.technomancy.us/emacs/")
-         ;; ("marmalade" . "http://marmalade-repo.org/packages/")
-         ))
+      '(
+        ("ELPA" . "http://tromey.com/elpa/")
+        ;; ("gnu" . "http://elpa.gnu.org/packages/")
+        ;; ("technomancy" . "http://repo.technomancy.us/emacs/")
+        ("marmalade" . "http://marmalade-repo.org/packages/")))
 (package-initialize)
 
 (require 'init)
-

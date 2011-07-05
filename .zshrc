@@ -73,6 +73,12 @@ alias ls="gnuls --color -F"
 alias ll="gnuls --color -lh"
 alias -g L="|$PAGER"
 alias tmux="tmux -2"
+alias ec="emacsclient -t"
+
+#-----------------------------
+# Commands
+#-----------------------------
+eval `keychain --eval --agents ssh id_rsa`
 
 #------------------------------
 # Comp stuff

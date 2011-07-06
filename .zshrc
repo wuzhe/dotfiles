@@ -141,7 +141,7 @@ setprompt () {
 	fi
 
 	# Check if we are on SSH or not  --{FIXME}--  always goes to |no SSH|
-	if [[ -z "$SSH_CLIENT"  &&  -z "$SSH2_CLIENT" && -z "$SSH_CONNECTION" && $UID == 1000 ]]; then
+	if [[ -z "$SSH_CLIENT"  &&  -z "$SSH2_CLIENT" && -z "$SSH_CONNECTION" && $UID == 1001 ]]; then
 		eval PR_HOST='${PR_GREEN}%M${PR_NO_COLOR}' # no SSH
 		PS1=$'${PR_BLUE}%~${PR_USER_OP}'
 	else

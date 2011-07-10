@@ -60,13 +60,11 @@
         (replace-match "" nil nil))
       (goto-char current))))
 
-
-;;; Unbind the stupid minimize that I always hit.
 (global-unset-key "\C-z")
-
 (global-set-key "\C-x~" 'smart-split)
 (global-set-key [(shift home)] '(lambda () (interactive) (other-window -1)))
 (global-set-key [(shift end)] '(lambda () (interactive) (other-window 1)))
+(global-set-key "\C-xy" 'anything)
 
 (winner-mode 1)
 

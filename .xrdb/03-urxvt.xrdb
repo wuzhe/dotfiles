@@ -64,6 +64,8 @@ URxvt*iso14755_52:       false
 !URxvt*perl-ext-common: default,matcher,searchable-scrollback
 URxvt*urlLauncher:     firefox
 URxvt*matcher.button:  1
+!! The default is M-s, which is conflict with paredit key in emacs
+URxvt.searchable-scrollback: CM-s
 ! Catch ugly URLs
 URxvt*cutchars:        '"'()*<>[]{|}
 !

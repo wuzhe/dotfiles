@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+play_pls() {
+    mpc clear
+    grep '^File[0-9]*' "$1" | sed -e 's/^File[0-9]*=//' | mpc add
+    mpc play
+}
+
+play_m3u() {
+    mpc clear
+    cat "$1" | sed -e '/^#/D' | mpc add
+    mpc play
+}
+
+open_file() {
+    case "$1" in
+        *.mp3|*.ogg|*.wav|*.flac|*.wma) mplayer "$1";;
+        *.avi|*.mpg|*.mp4|*.wmv)        mplayer "$1";;
+        *.jpg|*.gif|*.png|*.bmp)        feh "$1";;
+        *.pls)                          play_pls "$1";;
+        *.m3u)                          play_m3u "$1";;
+    esac
+}
+
+open_file "$1"
+
+

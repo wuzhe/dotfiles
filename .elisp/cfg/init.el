@@ -16,6 +16,13 @@
 
 (fset 'yes-or-no-p 'y-or-n-p)
 
+;; disable line wrap
+(setq truncate-lines t)
+;; make side by side buffers function the same as the main window
+(setq truncate-partial-width-windows nil)
+;; Add F12 to toggle line wrap
+(global-set-key [f11] 'toggle-truncate-lines)
+
 (server-start)
 
 ;; byte compile config file if changed

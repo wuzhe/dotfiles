@@ -19,7 +19,6 @@ export PAGER="most"
 export PATH="${HOME}/bin:${PATH}:/usr/local/jdk1.6.0/bin"
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
-export XDG_CONFIG_HOME="${HOME}" # prevent from creating Desktop dir in home
 
 if [[ $EMACS = "t" ]] then
    unsetopt zle  # turn off advanced line editting

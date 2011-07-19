@@ -1,6 +1,13 @@
-(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+(defun setup-frame-hook (frame)
+  "This function will be applied to all new emacs frames."
+  (set-frame-parameter frame 'alpha '(95 95)) ; translucency
+  (mouse-avoidance-mode 'cat-and-mouse)       ; avoid mouse
+  (fringe-mode '(1 . 1))                      ; make fringes smaller
+  (tool-bar-mode -1)                          ; no toolbar
+  (menu-bar-mode -1)                          ; no menubar
+  (scroll-bar-mode -1)                        ; no scrollbar
+  (set-frame-parameter (selected-frame) 'alpha '(95 95)))
+(add-hook 'after-make-frame-functions 'setup-frame-hook)
 
 (setq x-select-enable-clipboard t)
 (setq inhibit-startup-echo-area-message t)
@@ -77,6 +84,8 @@
 
 (require 'zenburn)
 (color-theme-zenburn)
+
+(require 'rv-font-23)
 
 ;; (desktop-save-mode 1)
 

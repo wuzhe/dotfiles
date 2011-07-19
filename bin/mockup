@@ -1,3 +1,3 @@
 #!/bin/sh
 
-/usr/bin/adobe-air /opt/MockupsForDesktop.air
+adobe-air /home/wz/.app/MockupsForDesktop.air

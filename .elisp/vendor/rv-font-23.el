@@ -8,8 +8,8 @@
 (defvar rv-font-symbol
   "DejaVu Sans Mono")
 
-(defvar rv-font-latin-size 9.0)
-(defvar rv-font-cjk-size 9.5)
+(defvar rv-font-latin-size 11.0)
+(defvar rv-font-cjk-size 10.5)
 
 (setq cjk-font "WenQuanYi Bitmap Song")
 ;;(setq rv-font-cjk "AR PL New Kai")

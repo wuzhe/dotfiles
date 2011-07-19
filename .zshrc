@@ -14,7 +14,7 @@ SAVEHIST=1000
 #------------------------------
 # Variables
 #------------------------------
-export EDITOR="edit"
+export EDITOR="em"
 export PAGER="most"
 export PATH="${HOME}/bin:${PATH}:/usr/local/jdk1.6.0/bin"
 export LANG="en_US.UTF-8"

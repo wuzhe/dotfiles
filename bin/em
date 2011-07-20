@@ -1,0 +1,9 @@
+#!/bin/sh
+#exec emacsclient --alternate-editor="" "$@"
+
+# ${HOME}/bin/em
+if test "$DISPLAY" ; then
+  nohup `which emacsclient` --alternate-editor="" -c "$@" > /dev/null 2>&1
+else
+  exec `which emacs` "$@"
+fi

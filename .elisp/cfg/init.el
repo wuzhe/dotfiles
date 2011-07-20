@@ -9,6 +9,9 @@
   (set-frame-parameter (selected-frame) 'alpha '(95 95)))
 (add-hook 'after-make-frame-functions 'setup-frame-hook)
 
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
+
 (setq x-select-enable-clipboard t)
 (setq inhibit-startup-echo-area-message t)
 (setq inhibit-startup-message t)
@@ -30,7 +33,7 @@
 ;; Add F12 to toggle line wrap
 (global-set-key [f11] 'toggle-truncate-lines)
 
-(server-start)
+;;; (server-start)
 
 ;; byte compile config file if changed
 (add-hook 'after-save-hook
@@ -194,7 +197,6 @@
   (setq erc-server-connect-function 'socks-open-network-stream)
   ;; (defalias 'open-network-stream 'socks-open-network-stream)
   (setq socks-server '("madk proxy" "localhost" "8080" 5)))
-
 (setup-proxy)
 
 (provide 'init)

@@ -11,6 +11,7 @@
 
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings))
+(require 'switch-window)
 
 (setq x-select-enable-clipboard t)
 (setq inhibit-startup-echo-area-message t)

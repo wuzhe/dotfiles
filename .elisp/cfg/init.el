@@ -138,13 +138,13 @@
 (setq eshell-smart-space-goes-to-end t)
 
 ;;bind the slime selector to f12 and add a method for finding clojure buffers
-(require 'slime)
-(set-language-environment "UTF-8")
-(setq slime-net-coding-system 'utf-8-unix)
-(define-key global-map (kbd "<f12>") 'slime-selector)
-(def-slime-selector-method ?j
-  "most recently visited clojure-mode buffer."
-  (slime-recently-visited-buffer 'clojure-mode))
+;; (require 'slime)
+;; (set-language-environment "UTF-8")
+;; (setq slime-net-coding-system 'utf-8-unix)
+;; (define-key global-map (kbd "<f12>") 'slime-selector)
+;; (def-slime-selector-method ?j
+;;   "most recently visited clojure-mode buffer."
+;;   (slime-recently-visited-buffer 'clojure-mode))
 
 ;; uniquify changes conflicting buffer names from file<2> etc
 (require 'uniquify)

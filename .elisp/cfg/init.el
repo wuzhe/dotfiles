@@ -113,6 +113,9 @@
 
 (require 'coffee-mode)
 
+(require 'sws-mode)
+(add-to-list 'auto-mode-alist '("\\.styl$" . sws-mode))
+
 (require 'paredit)
 (add-hook 'emacs-lisp-mode-hook 'enable-paredit-mode)
 (add-hook 'scheme-mode-hook     'enable-paredit-mode)
@@ -122,6 +125,12 @@
 (add-hook 'slime-repl-mode-hook 'enable-paredit-mode)
 (add-hook 'slime-repl-mode-hook 'clojure-mode-font-lock-setup)
 (setq slime-net-coding-system 'utf-8-unix)
+
+(add-hook 'clojure-mode-hook
+          (lambda () (save-excursion
+                  (goto-char (point-min))
+                  (if (search-forward "(deftest" nil t)
+                      (clojure-test-mode)))))
 
 (require 'org)
 (global-set-key "\C-cl" 'org-store-link)

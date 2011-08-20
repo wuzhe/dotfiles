@@ -18,6 +18,13 @@
 (setq inhibit-startup-message t)
 (setq python-python-command "python")
 
+;;; Split only horizontally, find an existing window to show buffer if
+;;; current window is too narrow to split
+(setq split-height-threshold nil)
+(defadvice split-window-sensibly (around split-horizontally activate)
+  (let ((split-width-threshold nil))
+    ad-do-it))
+
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
 ;; (setq thrift-indent-level 4)
@@ -84,8 +91,6 @@
 
 (global-unset-key "\C-z")
 (global-set-key "\C-x~" 'smart-split)
-(global-set-key [(shift home)] '(lambda () (interactive) (other-window -1)))
-(global-set-key [(shift end)] '(lambda () (interactive) (other-window 1)))
 (global-set-key "\C-xy" 'anything)
 
 (winner-mode 1)
@@ -137,13 +142,24 @@
                       (clojure-test-mode)))))
 
 (require 'org)
+(setq org-directory "~/org")
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
+;; (global-set-key "\C-cc" 'org-capture)
+;; (setq org-default-notes-file (concat org-directory "/notes.org"))
 (setq org-startup-indented 1)
 (setq org-startup-align-all-tables 1)
 (set-face-attribute 'org-hide nil :foreground "grey25")
 (add-hook 'org-mode-hook 'turn-on-font-lock)
+(setq org-tags-column 80)
+(setq org-agenda-window-setup 'current-window)
+(setq org-agenda-restore-windows-after-quit t)
+(setq org-agenda-files
+      (list "~/.org/book-reading.org"
+            "~/.org/code-reading.org"
+            "~/.org/sys-admin.org"
+            "~/.org/personal.org"))
 
 (require 'eshell)
 (require 'em-smart)
@@ -151,7 +167,7 @@
 (setq eshell-review-quick-commands nil)
 (setq eshell-smart-space-goes-to-end t)
 
-;;bind the slime selector to f12 and add a method for finding clojure buffers
+;; bind the slime selector to f12 and add a method for finding clojure buffers
 ;; (require 'slime)
 ;; (set-language-environment "UTF-8")
 ;; (setq slime-net-coding-system 'utf-8-unix)

@@ -36,6 +36,10 @@
 
 ;;; (server-start)
 
+;;; With with `Edit with Emacs` chrome extension
+;; (require 'edit-server)
+;; (edit-server-start)
+
 ;; byte compile config file if changed
 (add-hook 'after-save-hook
           '(lambda ()
@@ -139,6 +143,7 @@
 (setq org-startup-indented 1)
 (setq org-startup-align-all-tables 1)
 (set-face-attribute 'org-hide nil :foreground "grey25")
+(add-hook 'org-mode-hook 'turn-on-font-lock)
 
 (require 'eshell)
 (require 'em-smart)

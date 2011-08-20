@@ -142,7 +142,7 @@
                       (clojure-test-mode)))))
 
 (require 'org)
-(setq org-directory "~/org")
+(setq org-directory "~/.org")
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
@@ -155,12 +155,7 @@
 (setq org-tags-column -80)
 (setq org-agenda-window-setup 'current-window)
 (setq org-agenda-restore-windows-after-quit t)
-(setq org-agenda-files
-      (list "~/.org/book-reading.org"
-            "~/.org/code-reading.org"
-            "~/.org/sys-admin.org"
-            "~/.org/writing.org"
-            "~/.org/personal.org"))
+(setq org-agenda-files (file-expand-wildcards "~/.org/*.org"))
 
 (require 'eshell)
 (require 'em-smart)

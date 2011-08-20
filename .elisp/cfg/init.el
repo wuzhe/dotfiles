@@ -10,7 +10,7 @@
 (add-hook 'after-make-frame-functions 'setup-frame-hook)
 
 (when (fboundp 'windmove-default-keybindings)
-  (windmove-default-keybindings))
+  (windmove-default-keybindings 'super))
 (require 'switch-window)
 
 (setq x-select-enable-clipboard t)

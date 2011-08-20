@@ -152,13 +152,14 @@
 (setq org-startup-align-all-tables 1)
 (set-face-attribute 'org-hide nil :foreground "grey25")
 (add-hook 'org-mode-hook 'turn-on-font-lock)
-(setq org-tags-column 80)
+(setq org-tags-column -80)
 (setq org-agenda-window-setup 'current-window)
 (setq org-agenda-restore-windows-after-quit t)
 (setq org-agenda-files
       (list "~/.org/book-reading.org"
             "~/.org/code-reading.org"
             "~/.org/sys-admin.org"
+            "~/.org/writing.org"
             "~/.org/personal.org"))
 
 (require 'eshell)

@@ -163,6 +163,11 @@
 (setq eshell-review-quick-commands nil)
 (setq eshell-smart-space-goes-to-end t)
 
+(autoload 'woman "woman"
+  "Decode and browse a UN*X man page." t)
+(autoload 'woman-find-file "woman"
+  "Find, decode and browse a specific UN*X man-page file." t)
+
 ;; bind the slime selector to f12 and add a method for finding clojure buffers
 ;; (require 'slime)
 ;; (set-language-environment "UTF-8")

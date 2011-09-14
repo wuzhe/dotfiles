@@ -18,3 +18,4 @@ Xft*rgba:      rgb
 
 ! Turn off XIM, C-\ to use input methods provided by Emacs
 Emacs.useXIM: off
+

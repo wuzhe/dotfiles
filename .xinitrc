@@ -1,6 +1,6 @@
 while xsetroot -name "`date +'%F %R'` `uptime | sed 's/.*,//'`"
 do
-   sleep 20
+   sleep 0.5
 done &
 
 export XMODIFIERS='@im=fcitx'

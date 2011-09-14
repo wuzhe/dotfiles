@@ -30,6 +30,7 @@
 ;; (setq thrift-indent-level 4)
 (setq css-indent-level 4)
 (setq py-indent-offset 2)
+(setq js-indent-level 2)
 (setq js2-basic-offset 2)
 
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -102,7 +103,7 @@
 
 ;; (desktop-save-mode 1)
 
-;; (require 'magit)
+(require 'magit)
 
 (require 'buffer-move)
 (global-set-key (kbd "<C-S-up>")     'buf-move-up)
@@ -117,13 +118,15 @@
 (add-to-list 'auto-mode-alist '("\\.as\\'" . actionscript-mode))
 
 (require 'js2-mode)
-(autoload 'js2-mode "js2-mode" nil t)
-(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+;; (autoload 'js2-mode "js2-mode" nil t)
+;; (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 
 (require 'coffee-mode)
 
 (require 'sws-mode)
 (add-to-list 'auto-mode-alist '("\\.styl$" . sws-mode))
+
+(add-to-list 'auto-mode-alist '("\\.eco$" . html-mode))
 
 (require 'paredit)
 (add-hook 'emacs-lisp-mode-hook 'enable-paredit-mode)

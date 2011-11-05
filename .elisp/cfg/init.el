@@ -42,6 +42,9 @@
 ;; Add F12 to toggle line wrap
 (global-set-key [f11] 'toggle-truncate-lines)
 
+(global-unset-key (kbd "C-SPC"))
+(global-set-key (kbd "M-SPC") 'set-mark-command)
+
 ;;; (server-start)
 
 ;;; With with `Edit with Emacs` chrome extension

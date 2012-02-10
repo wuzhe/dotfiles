@@ -1,0 +1,7 @@
+HOW TO SETUP A NEW COMPUTER
+
+  cd ~
+  git init
+  echo '*' >> .git/info/exclude
+  git remote add origin http://wuzhe@github.com/wuzhe/dotfiles.git
+  git pull origin master

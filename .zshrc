@@ -132,7 +132,7 @@ setprompt () {
 	PR_NO_COLOR="%{$terminfo[sgr0]%}"
 
 	# Check the UID
-	if [[ $UID -ge 1000 ]]; then # normal user
+	if [[ $UID -ne 1000 ]]; then # normal user
 		eval PR_USER='${PR_GREEN}%n${PR_NO_COLOR}'
 		eval PR_USER_OP='${PR_GREEN}\$${PR_NO_COLOR}'
 	elif [[ $UID -eq 0 ]]; then # root
@@ -142,11 +142,11 @@ setprompt () {
 
 	# Check if we are on SSH or not  --{FIXME}--  always goes to |no SSH|
 	if [[ -z "$SSH_CLIENT"  &&  -z "$SSH2_CLIENT" && -z "$SSH_CONNECTION" && $UID == 1001 ]]; then
-		eval PR_HOST='${PR_GREEN}%M${PR_NO_COLOR}' # no SSH
+		eval PR_HOST='${PR_GREEN}%m${PR_NO_COLOR}' # no SSH
 		PS1=$'${PR_BLUE}%~${PR_USER_OP}'
 	else
-		eval PR_HOST='${PR_YELLOW}%M${PR_NO_COLOR}' #SSH
-		PS1=$'${PR_CYAN}[${PR_USER}${PR_CYAN}@${PR_HOST}${PR_CYAN}][${PR_BLUE}%~${PR_CYAN}]${PR_USER_OP}${PR_WHITE}'
+		eval PR_HOST='${PR_YELLOW}%m${PR_NO_COLOR}' #SSH
+		PS1=$'${PR_CYAN}[${PR_USER}${PR_CYAN}@${PR_HOST}${PR_CYAN}][${PR_BLUE}%~${PR_CYAN}]${PR_USER_OP}${PR_NO_COLOR}'
 	fi
 	# set the prompt
 	PS2=$'%_>'

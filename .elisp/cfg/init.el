@@ -39,7 +39,8 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;; disable line wrap
-(setq truncate-lines t)
+(setq-default truncate-lines t)
+(setq-default global-visual-line-mode t)
 ;; make side by side buffers function the same as the main window
 (setq truncate-partial-width-windows nil)
 ;; Add F12 to toggle line wrap

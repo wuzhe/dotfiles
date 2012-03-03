@@ -16,7 +16,7 @@ SAVEHIST=1000
 #------------------------------
 export EDITOR="em"
 export PAGER="most"
-export PATH="${HOME}/bin:${PATH}:/usr/local/jdk1.6.0/bin"
+export PATH="${HOME}/bin:${PATH}"
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
@@ -33,7 +33,7 @@ fi
 #export JAVAVM_OPTS="-Djava.net.preferIPv4Stack=true"
 #export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
 #export _JAVA_OPTIONS='-Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
-export JAVA_FONTS=/usr/share/fonts/TTF
+#export JAVA_FONTS=/usr/share/fonts/TTF
 
 #-----------------------------
 # Dircolors
@@ -69,11 +69,11 @@ setopt AUTO_CD
 #------------------------------
 # Alias stuff
 #------------------------------
-alias ls="gnuls --color -F"
-alias ll="gnuls --color -lh"
+#alias ls="gnuls --color -F"
+#alias ll="gnuls --color -lh"
 alias -g L="|$PAGER"
 alias tmux="tmux -2"
-alias ec="emacsclient -t"
+#alias ec="emacsclient -t"
 
 #-----------------------------
 # Commands
@@ -146,7 +146,7 @@ setprompt () {
 		PS1=$'${PR_BLUE}%~${PR_USER_OP}'
 	else
 		eval PR_HOST='${PR_YELLOW}%M${PR_NO_COLOR}' #SSH
-		PS1=$'${PR_CYAN}[${PR_USER}${PR_CYAN}@${PR_HOST}${PR_CYAN}][${PR_BLUE}%~${PR_CYAN}]${PR_USER_OP}'
+		PS1=$'${PR_CYAN}[${PR_USER}${PR_CYAN}@${PR_HOST}${PR_CYAN}][${PR_BLUE}%~${PR_CYAN}]${PR_USER_OP}${PR_WHITE}'
 	fi
 	# set the prompt
 	PS2=$'%_>'

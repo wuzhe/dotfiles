@@ -133,6 +133,13 @@
 (add-to-list 'auto-mode-alist '("\\.eco$" . html-mode))
 
 (require 'paredit)
+
+;; remap keys so that terminals in Mac OS X can do it too
+(define-key paredit-mode-map (kbd "C-c C-r") 'paredit-forward-slurp-sexp)
+(define-key paredit-mode-map (kbd "C-c M-r") 'paredit-forward-barf-sexp)
+(define-key paredit-mode-map (kbd "C-c C-l") 'paredit-backward-slurp-sexp)
+(define-key paredit-mode-map (kbd "C-c M-l") 'paredit-backward-barf-sexp)
+
 (add-hook 'emacs-lisp-mode-hook 'enable-paredit-mode)
 (add-hook 'scheme-mode-hook     'enable-paredit-mode)
 (add-hook 'clojure-mode-hook    'enable-paredit-mode)
@@ -140,6 +147,7 @@
 (add-hook 'espresso-mode-hook   'esk-paredit-nonlisp)
 (add-hook 'slime-repl-mode-hook 'enable-paredit-mode)
 (add-hook 'slime-repl-mode-hook 'clojure-mode-font-lock-setup)
+
 (setq slime-net-coding-system 'utf-8-unix)
 
 (add-hook 'clojure-mode-hook

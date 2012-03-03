@@ -135,6 +135,7 @@
 (require 'paredit)
 
 ;; remap keys so that terminals in Mac OS X can do it too
+(define-key paredit-mode-map (kbd "C-c M-w") 'paredit-wrap-round)
 (define-key paredit-mode-map (kbd "C-c C-r") 'paredit-forward-slurp-sexp)
 (define-key paredit-mode-map (kbd "C-c M-r") 'paredit-forward-barf-sexp)
 (define-key paredit-mode-map (kbd "C-c C-l") 'paredit-backward-slurp-sexp)

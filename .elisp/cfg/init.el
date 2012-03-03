@@ -48,11 +48,7 @@
 (global-unset-key (kbd "C-SPC"))
 (global-set-key (kbd "M-SPC") 'set-mark-command)
 
-;;; (server-start)
-
-;;; With with `Edit with Emacs` chrome extension
-;; (require 'edit-server)
-;; (edit-server-start)
+(server-start)
 
 ;; byte compile config file if changed
 (add-hook 'after-save-hook
@@ -103,7 +99,8 @@
 (winner-mode 1)
 
 (require 'zenburn)
-(color-theme-zenburn)
+(if window-system
+  (color-theme-zenburn))
 
 (require 'rv-font-23)
 

@@ -1,3 +1,6 @@
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+
 (defun setup-frame-hook (frame)
   "This function will be applied to all new emacs frames."
   (set-frame-parameter frame 'alpha '(95 95)) ; translucency

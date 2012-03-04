@@ -135,11 +135,11 @@
 (require 'paredit)
 
 ;; remap keys so that terminals in Mac OS X can do it too
-(define-key paredit-mode-map (kbd "C-c M-w") 'paredit-wrap-round)
-(define-key paredit-mode-map (kbd "C-c C-r") 'paredit-forward-slurp-sexp)
-(define-key paredit-mode-map (kbd "C-c M-r") 'paredit-forward-barf-sexp)
-(define-key paredit-mode-map (kbd "C-c C-l") 'paredit-backward-slurp-sexp)
-(define-key paredit-mode-map (kbd "C-c M-l") 'paredit-backward-barf-sexp)
+(define-key paredit-mode-map (kbd "C-c $") 'paredit-wrap-round)
+(define-key paredit-mode-map (kbd "C-c )") 'paredit-forward-slurp-sexp)
+(define-key paredit-mode-map (kbd "C-c }") 'paredit-forward-barf-sexp)
+(define-key paredit-mode-map (kbd "C-c (") 'paredit-backward-slurp-sexp)
+(define-key paredit-mode-map (kbd "C-c {") 'paredit-backward-barf-sexp)
 
 (add-hook 'emacs-lisp-mode-hook 'enable-paredit-mode)
 (add-hook 'scheme-mode-hook     'enable-paredit-mode)

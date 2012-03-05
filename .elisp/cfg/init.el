@@ -103,7 +103,7 @@
 (if window-system
   (color-theme-zenburn))
 
-(require 'rv-font-23)
+;; (require 'rv-font-23)
 
 ;; (desktop-save-mode 1)
 

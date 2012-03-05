@@ -69,8 +69,8 @@ setopt AUTO_CD
 #------------------------------
 # Alias stuff
 #------------------------------
-alias ls="gnuls --color -F"
-alias ll="gnuls --color -lh"
+alias ls="ls --color -F"
+alias ll="ls --color -lh"
 alias -g L="|$PAGER"
 alias tmux="tmux -2"
 alias ec="emacsclient -t"

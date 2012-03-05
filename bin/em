@@ -1,8 +1,8 @@
 #!/bin/sh
-# ${HOME}/bin/em
 
-if test "$DISPLAY" ; then
-  nohup `which emacsclient` --alternate-editor="" -c "$@" > /dev/null 2>&1
-else
-  `which emacsclient` -nw --alternate-editor="" -c "$@"
-fi
+# ${HOME}/bin/em
+#if test "$DISPLAY" ; then
+#  nohup `which emacsclient.emacs-snapshot` --alternate-editor="" -c "$@"# > /dev/null 2>&1
+#else
+  exec `which emacs-snapshot` -nw --alternate-editor="" -c "$@"
+#fi

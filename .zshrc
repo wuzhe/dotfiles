@@ -16,7 +16,7 @@ SAVEHIST=1000
 #------------------------------
 export EDITOR="em"
 export PAGER="most"
-export PATH="${HOME}/bin:${PATH}"
+export PATH="${HOME}/bin:/usr/local/share/python:/usr/local/bin:/usr/local/sbin:${PATH}"
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 

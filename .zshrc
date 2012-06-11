@@ -20,6 +20,9 @@ export PATH="${HOME}/bin:/usr/local/share/python:/usr/local/bin:/usr/local/sbin:
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
+export HOMEBREW_USE_GCC=1
+export HOMEBREW_VERBOSE=1
+
 if [[ $EMACS = "t" ]] then
    unsetopt zle  # turn off advanced line editting
 
